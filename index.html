@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subscribers</title>
+  <link href="./Style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <!--Cliker Area-->
+  <div id="sub-clicker">
+    <div class="content">
+      <h1 id="your_Subs"></h1>
+      <h2 id="sub$click"></h2>
+      <h2 id="sub-sps"></h2>
+    </div>
+    <br />
+    <img align="center" class="LeClicker" onclick="Game$sub$get()" src="./Subscriber-BTN.png" />
+    <!-- Trigger/Open The Modal -->
+    <br />
+    <br />
+    <img align="center" id="myBtn" src="./Subscriber-BTN-Store.png" />
+  </div>
+  <div id="globalGoals">
+    <h1>Goals:</h1>
+    <img id="SilverPlayButton" src="" />
+    <img id="GoldPlayButton" src="" />
+    <img id="DiamondPlayButton" src="" />
+    <img id="GodPlayButton" src="" />
+    <img id="BestYoutuber" src="" />
+    <img id="MoastStorage" src="" />
+  </div>
+  <!--buying area-->
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Subscriber Store</h2>
+      </div>
+      <div class="modal-body">
+        <button type="button" onclick="ClickerUP();">S-P-S Upgrade (100 Subscribers)</button>
+        <button type="button" onclick="ClickerSPC();">S-P-C Upgrade (120 Subscribers)</button>
+        <button type="button" onclick="ClickerSPB();">Silver Play Button (2000 Subscribers)</button>
+        <button type="button" onclick="ClickerGPB();">Gold Play Button (3000 Subscribers)</button>
+        <button type="button" onclick="ClickerDPB();">Diamond Play Button (4000 Subs)</button>
+        <button type="button" onclick="ClickerGodPB();">God Play Button (6000 Subscribers)</button>
+        <button type="button" onclick="BestYoutuberPB();">Best Youtuber Play Button (8000 Subscribers)</button>
+        <button type="button" onclick="MoastStoragePB();">Moast Storage Play Button (10000 Subscribers)</button>
+      </div>
+      <div class="modal-header">
+        <h2>Starter Kits</h2>
+      </div>
+      <div class="modal-body2">
+        <button type="button" onclick="BasicStarter();">Basic Starter Kit</button>
+        <button type="button" onclick="AdvancedStarter();">Good Starter Kit</button>
+        <button type="button" onclick="ProStarter();">Pro Starter Kit</button>
+      </div>
+    </div>
+
+  </div>
+  <script>
+  var Game$sub$count = 0;
+  var num$sub = 1;
+  var sub$click = 1;
+
+  var SubPerClick = setInterval(function () {
+    document.getElementById("sub$click").innerHTML = "Subs Per Click: " + sub$click;
+  }, 1000);
+
+  var SubSps = setInterval(function () {
+    document.getElementById("sub-sps").innerHTML = "Subs Per Second: " + num$sub;
+  }, 1000);
+
+  var SubSpsCount = setInterval(function () {
+    Game$sub$count += num$sub;
+  }, 1000);
+
+  setInterval(function () {
+    document.getElementById("your_Subs").innerHTML = "Subscribers: " + Game$sub$count;
+  }, 50);
+
+  var Game$sub$get = function() {
+    Game$sub$count += sub$click;
+  }
+  //The modal-content
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+  function ClickerUP() {
+    if (Game$sub$count >= 100) {
+      alert("Subs Per Second Upgraded!");
+      num$sub += 1;
+      Game$sub$count -= 100;
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function ClickerSPC() {
+    if (Game$sub$count >= 120) {
+      alert("Subs Per Click Upgraded!");
+      sub$click += 1;
+      Game$sub$count -= 120;
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function ClickerSPB() {
+    if (Game$sub$count >= 2000) {
+      alert("Unlocked Silver Play Button!!");
+      Game$sub$count -= 2000;
+      document.getElementById("SilverPlayButton").src = "./Subscriber-TheSilverPlayBTN.png";
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function ClickerGPB() {
+    if (Game$sub$count >= 3000) {
+      alert("Unlocked Gold Play Button!!");
+      Game$sub$count -= 3000;
+      document.getElementById("GoldPlayButton").src = "./Subscriber-TheGoldPlayBTN.png";
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function ClickerDPB() {
+    if (Game$sub$count >= 4000) {
+      alert("Unlocked Diamond Play Button!!");
+      Game$sub$count -= 4000;
+      document.getElementById("DiamondPlayButton").src = "./Subscriber-TheDiamondPlayBTN.png";
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function ClickerGodPB() {
+    if (Game$sub$count >= 6000) {
+      alert("Unlocked God Play Button!!");
+      Game$sub$count -= 6000;
+      document.getElementById("GodPlayButton").src = "./Subscriber-TheGodPlayBTN.png";
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function BestYoutuberPB() {
+    if (Game$sub$count >= 8000) {
+      alert("Unlocked God Play Button!!");
+      Game$sub$count -= 8000;
+      document.getElementById("BestYoutuber").src = "./Subscriber-BestYoutuberBTN.png";
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function MoastStoragePB() {
+    if (Game$sub$count >= 10000) {
+      alert("Unlocked God Play Button!!");
+      Game$sub$count -= 10000;
+      document.getElementById("MoastStorage").src = "./Subscriber-MoastStorageBTN.png";
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function BasicStarter() {
+    var confirmUrSauce = confirm("Are you sure you want to unlock this kit?");
+    if (confirmUrSauce === true) {
+      var email = prompt("Please Type Your Email: ");
+      alert("Done!");
+      Game$sub$count = 500;
+      num$sub = 5;
+      sub$click = 5;
+      modal.style.display = "none";
+    } else {
+      modal.style.display = "none";
+    }
+  };
+  function AdvancedStarter() {
+    var confirmUrSauce = confirm("Are you sure you want to unlock this kit?");
+    if (confirmUrSauce === true) {
+      var email = prompt("Please Type Your Email: ");
+      alert("Done!");
+      Game$sub$count = 750;
+      num$sub = 10;
+      sub$click = 10;
+      modal.style.display = "none";
+    } else {
+      modal.style.display = "none";
+    }
+  };
+  function ProStarter() {
+    var confirmUrSauce = confirm("Are you sure you want to unlock this kit?");
+    if (confirmUrSauce === true) {
+      var email = prompt("Please Type Your Email: ");
+      alert("Done!");
+      Game$sub$count = 1250;
+      num$sub = 20;
+      sub$click = 20;
+      modal.style.display = "none";
+    } else {
+      modal.style.display = "none";
+    }
+  };
+  </script>
+</body>
+</html>
