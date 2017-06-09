@@ -117,7 +117,12 @@ button {
     color: white;
 }
 
-.modal-body, .modal-body2 {padding: 2px 16px;}
+.modal-body {padding: 2px 16px;}
+
+.modal-body2 {
+  padding: 2px 16px;
+  height: 400px;
+}
 
 @media only screen and (max-width: 800px) {
   .modal-body2 {
