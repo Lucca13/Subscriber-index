@@ -121,7 +121,7 @@ button {
 
 .modal-body2 {
   padding: 2px 16px;
-  height: 400px;
+  height: 200px;
 }
 
 @media only screen and (max-width: 800px) {
