@@ -28,8 +28,8 @@
     <img id="GodPlayButton" src="" />
     <img id="BestYoutuber" src="" />
     <img id="MoastStorage" src="" />
-    <img id="MostLoved" src="" />
-    <img id="MostPopular" src="" />
+    <img id="MostLovedPB" src="" />
+    <img id="MostPopularPB" src="" />
   </div>
   <!--buying area-->
   <!-- The Modal -->
@@ -215,7 +215,7 @@
   };
   function MostPopularPB() {
     if (Game$sub$count >= 30000) {
-      alert("Unlocked Most Storage Play Button!!");
+      alert("Unlocked Most Popular Play Button!!");
       Game$sub$count -= 30000;
       document.getElementById("MostPopularPB").src = "./Subscriber-MostPopularBTN.png";
     } else {
