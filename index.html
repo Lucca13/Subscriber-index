@@ -28,8 +28,8 @@
     <img id="GodPlayButton" src="" />
     <img id="BestYoutuber" src="" />
     <img id="MoastStorage" src="" />
-    <img id="MostLovedPB" src="" />
-    <img id="MostPopularPB" src="" />
+    <img id="MostLoved" src="" />
+    <img id="MostPopular" src="" />
   </div>
   <!--buying area-->
   <!-- The Modal -->
@@ -207,7 +207,7 @@
     if (Game$sub$count >= 24000) {
       alert("Unlocked Most Loved Youtuber Play Button!!");
       Game$sub$count -= 24000;
-      document.getElementById("MostLovedPB").src = "./Subscriber-MostLovedBTN.png";
+      document.getElementById("MostLoved").src = "./Subscriber-MostLovedBTN.png";
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
       modal.style.display = "none";
@@ -217,7 +217,7 @@
     if (Game$sub$count >= 30000) {
       alert("Unlocked Most Popular Play Button!!");
       Game$sub$count -= 30000;
-      document.getElementById("MostPopularPB").src = "./Subscriber-MostPopularBTN.png";
+      document.getElementById("MostPopular").src = "./Subscriber-MostPopularBTN.png";
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
       modal.style.display = "none";
