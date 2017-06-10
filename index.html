@@ -42,8 +42,8 @@
         <h2>Subscriber Store</h2>
       </div>
       <div class="modal-body">
-        <button type="button" onclick="ClickerUP();">S-P-S Upgrade (350 Subscribers)</button>
-        <button type="button" onclick="ClickerSPC();">S-P-C Upgrade (350 Subscribers)</button>
+        <button type="button" onclick="ClickerUP();">S-P-S Upgrade (225 Subscribers)</button>
+        <button type="button" onclick="ClickerSPC();">S-P-C Upgrade (225 Subscribers)</button>
         <button type="button" onclick="ClickerSPB();">Silver Play Button (5000 Subscribers)</button>
         <button type="button" onclick="ClickerGPB();">Gold Play Button (8000 Subscribers)</button>
         <button type="button" onclick="ClickerDPB();">Diamond Play Button (11000 Subs)</button>
@@ -124,20 +124,20 @@
   }
 
   function ClickerUP() {
-    if (Game$sub$count >= 100) {
+    if (Game$sub$count >= 225) {
       alert("Subs Per Second Upgraded!");
       num$sub += 1;
-      Game$sub$count -= 100;
+      Game$sub$count -= 225;
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
       modal.style.display = "none";
     }
   };
   function ClickerSPC() {
-    if (Game$sub$count >= 120) {
+    if (Game$sub$count >= 225) {
       alert("Subs Per Click Upgraded!");
       sub$click += 1;
-      Game$sub$count -= 120;
+      Game$sub$count -= 225;
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
       modal.style.display = "none";
