@@ -28,6 +28,8 @@
     <img id="GodPlayButton" src="" />
     <img id="BestYoutuber" src="" />
     <img id="MoastStorage" src="" />
+    <img id="MostLoved" src="" />
+    <img id="MostPopular" src="" />
   </div>
   <!--buying area-->
   <!-- The Modal -->
@@ -40,14 +42,16 @@
         <h2>Subscriber Store</h2>
       </div>
       <div class="modal-body">
-        <button type="button" onclick="ClickerUP();">S-P-S Upgrade (100 Subscribers)</button>
-        <button type="button" onclick="ClickerSPC();">S-P-C Upgrade (120 Subscribers)</button>
-        <button type="button" onclick="ClickerSPB();">Silver Play Button (2000 Subscribers)</button>
-        <button type="button" onclick="ClickerGPB();">Gold Play Button (3000 Subscribers)</button>
-        <button type="button" onclick="ClickerDPB();">Diamond Play Button (4000 Subs)</button>
-        <button type="button" onclick="ClickerGodPB();">God Play Button (6000 Subscribers)</button>
-        <button type="button" onclick="BestYoutuberPB();">Best Youtuber Play Button (8000 Subscribers)</button>
-        <button type="button" onclick="MoastStoragePB();">Moast Storage Play Button (10000 Subscribers)</button>
+        <button type="button" onclick="ClickerUP();">S-P-S Upgrade (350 Subscribers)</button>
+        <button type="button" onclick="ClickerSPC();">S-P-C Upgrade (350 Subscribers)</button>
+        <button type="button" onclick="ClickerSPB();">Silver Play Button (5000 Subscribers)</button>
+        <button type="button" onclick="ClickerGPB();">Gold Play Button (8000 Subscribers)</button>
+        <button type="button" onclick="ClickerDPB();">Diamond Play Button (11000 Subs)</button>
+        <button type="button" onclick="ClickerGodPB();">God Play Button (14000 Subscribers)</button>
+        <button type="button" onclick="BestYoutuberPB();">Best Youtuber Play Button (18000 Subscribers)</button>
+        <button type="button" onclick="MoastStoragePB();">Most Storage Play Button (21000 Subscribers)</button>
+        <button type="button" onclick="MostLovedPB();">Most Loved Play Button (24000 Subscribers)</button>
+        <button type="button" onclick="MostPopularPB();">Most Popular Play Button (30000 Subscribers)</button>
       </div>
       <div class="modal-header">
         <h2>Starter Kits</h2>
@@ -140,9 +144,9 @@
     }
   };
   function ClickerSPB() {
-    if (Game$sub$count >= 2000) {
+    if (Game$sub$count >= 5000) {
       alert("Unlocked Silver Play Button!!");
-      Game$sub$count -= 2000;
+      Game$sub$count -= 5000;
       document.getElementById("SilverPlayButton").src = "./Subscriber-TheSilverPlayBTN.png";
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
@@ -150,9 +154,9 @@
     }
   };
   function ClickerGPB() {
-    if (Game$sub$count >= 3000) {
+    if (Game$sub$count >= 8000) {
       alert("Unlocked Gold Play Button!!");
-      Game$sub$count -= 3000;
+      Game$sub$count -= 8000;
       document.getElementById("GoldPlayButton").src = "./Subscriber-TheGoldPlayBTN.png";
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
@@ -160,9 +164,9 @@
     }
   };
   function ClickerDPB() {
-    if (Game$sub$count >= 4000) {
+    if (Game$sub$count >= 11000) {
       alert("Unlocked Diamond Play Button!!");
-      Game$sub$count -= 4000;
+      Game$sub$count -= 11000;
       document.getElementById("DiamondPlayButton").src = "./Subscriber-TheDiamondPlayBTN.png";
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
@@ -170,9 +174,9 @@
     }
   };
   function ClickerGodPB() {
-    if (Game$sub$count >= 6000) {
+    if (Game$sub$count >= 14000) {
       alert("Unlocked God Play Button!!");
-      Game$sub$count -= 6000;
+      Game$sub$count -= 14000;
       document.getElementById("GodPlayButton").src = "./Subscriber-TheGodPlayBTN.png";
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
@@ -180,9 +184,9 @@
     }
   };
   function BestYoutuberPB() {
-    if (Game$sub$count >= 8000) {
+    if (Game$sub$count >= 18000) {
       alert("Unlocked Best Youtuber Play Button!!");
-      Game$sub$count -= 8000;
+      Game$sub$count -= 18000;
       document.getElementById("BestYoutuber").src = "./Subscriber-BestYoutuberBTN.png";
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
@@ -190,10 +194,30 @@
     }
   };
   function MoastStoragePB() {
-    if (Game$sub$count >= 10000) {
+    if (Game$sub$count >= 21000) {
       alert("Unlocked Most Storage Play Button!!");
-      Game$sub$count -= 10000;
+      Game$sub$count -= 21000;
       document.getElementById("MoastStorage").src = "./Subscriber-MoastStorageBTN.png";
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function MostLovedPB() {
+    if (Game$sub$count >= 24000) {
+      alert("Unlocked Most Loved Youtuber Play Button!!");
+      Game$sub$count -= 24000;
+      document.getElementById("MostLovedPB").src = "./Subscriber-MostLovedBTN.png";
+    } else {
+      alert("Sorry You Don't Have Enough Subscribers!");
+      modal.style.display = "none";
+    }
+  };
+  function MostPopularPB() {
+    if (Game$sub$count >= 30000) {
+      alert("Unlocked Most Storage Play Button!!");
+      Game$sub$count -= 30000;
+      document.getElementById("MostPopularPB").src = "./Subscriber-MostPopularBTN.png";
     } else {
       alert("Sorry You Don't Have Enough Subscribers!");
       modal.style.display = "none";
@@ -205,8 +229,8 @@
       var email = prompt("Please Type Your Email: ");
       alert("Done!");
       Game$sub$count = 500;
-      num$sub = 5;
-      sub$click = 5;
+      num$sub = 2;
+      sub$click = 2;
       modal.style.display = "none";
     } else {
       modal.style.display = "none";
@@ -217,9 +241,9 @@
     if (confirmUrSauce === true) {
       var email = prompt("Please Type Your Email: ");
       alert("Done!");
-      Game$sub$count = 750;
-      num$sub = 10;
-      sub$click = 10;
+      Game$sub$count = 650;
+      num$sub = 5;
+      sub$click = 5;
       modal.style.display = "none";
     } else {
       modal.style.display = "none";
@@ -230,9 +254,9 @@
     if (confirmUrSauce === true) {
       var email = prompt("Please Type Your Email: ");
       alert("Done!");
-      Game$sub$count = 1250;
-      num$sub = 20;
-      sub$click = 20;
+      Game$sub$count = 800;
+      num$sub = 8;
+      sub$click = 8;
       modal.style.display = "none";
     } else {
       modal.style.display = "none";
